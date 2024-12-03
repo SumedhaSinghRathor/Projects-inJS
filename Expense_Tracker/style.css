@@ -1,55 +1,73 @@
 body {
-  margin: 0;
-  padding: 0;
-  border-style: border-box;
+  background-color: #f2f2f2;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.container {
+.expense-tracker {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: beige;
+}
+
+.expense-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.add-expense-btn {
+  padding: 10px 30px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.total-expenses {
+  text-align: right;
+}
+
+.expense-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #d3d3d3;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.card {
-  background-color: #fff;
-  border-radius: 13px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  border: 2px solid #632df8;
-  max-width: 400px;
-}
-
-h1 {
-  text-align: center;
-  background-color: #632df8;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  color: #fff;
-  border-radius: 10px 10px 0px 0px;
-}
-
-.clock {
-  padding: 25px;
+.expense-item {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
-.time-element {
-  font-size: 48px;
+.expense-item-description {
   font-weight: bold;
-  color: #000;
-  margin: 0px 10px;
 }
 
-.colon-element {
-  font-size: 32px;
+.delete-expense-btn {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
   font-weight: bold;
-  color: #000;
-  margin: 0px 10px;
+  cursor: pointer;
 }
