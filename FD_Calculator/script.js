@@ -1,20 +1,16 @@
-function updateClock() {
-  let now = new Date();
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-  let seconds = now.getSeconds();
+function calculateMaturityAmount() {
+  const principle = parseFloat(document.getElementById("principle").value);
+  const interestRate = parseFloat(
+    document.getElementById("interestRate").value
+  );
+  const tenure = parseFloat(document.getElementById("tenure").value);
 
-  hours = hours < 10 ? "0" + hours : hours;
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-  seconds = seconds < 10 ? "0" + seconds : seconds;
+  const maturityAmount = principle + (principle * interestRate * tenure) / 100;
 
-  const hoursElement = document.getElementById("hours");
-  const minutesElement = document.getElementById("minutes");
-  const secondsElement = document.getElementById("seconds");
-
-  hoursElement.textContent = hours;
-  minutesElement.textContent = minutes;
-  secondsElement.textContent = seconds;
+  document.getElementById("result").innerText =
+    `Maturity Amount: ${maturityAmount.toFixed(2)}`;
 }
 
-setInterval(updateClock, 1000);
+document
+  .getElementById("calculateBtn")
+  .addEventListener("click", calculateMaturityAmount);
