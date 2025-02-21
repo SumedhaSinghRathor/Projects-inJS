@@ -57,10 +57,10 @@ a:visited {
 }
 
 footer {
-  background-color: #fff;
-  color: #000;
+  background-color: rgba(146, 146, 146, 0.68);
+  color: #fff;
   display: flex;
   font-size: 0.8em;
   justify-content: space-between;
-  padding: 2px;
+  padding: 5px;
 }
